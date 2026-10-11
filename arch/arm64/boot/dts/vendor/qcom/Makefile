@@ -9,7 +9,7 @@ dtbo-$(CONFIG_ARCH_SAVANNAH) += \
 		kona-savannah-evt1-overlay.dtbo \
 		kona-savannah-evt2-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_BURTON) += \
+dtbo-$(CONFIG_BURTON_DTB) += \
 		kona-burton-evt1-overlay.dtbo \
 		kona-burton-dvt1-overlay.dtbo \
 		kona-burton-dvt1c-overlay.dtbo \
