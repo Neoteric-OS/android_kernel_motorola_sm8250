@@ -87,6 +87,10 @@ ifeq ($(filter-out $(CONFIG_NIO_DTB) $(CONFIG_PSTAR_DTB), y),)
 LINUXINCLUDE    += \
                 -include $(srctree)/techpack/audio/config/konanio.h
 endif
+ifeq ($(CONFIG_BURTON_DTB), y)
+LINUXINCLUDE    += \
+                -include $(srctree)/techpack/audio/config/konaburton.h
+endif
 ifeq ($(CONFIG_KIEV_DTB), y)
 LINUXINCLUDE    += \
                 -include $(srctree)/techpack/audio/config/litokiev.h
