@@ -80,8 +80,8 @@ static int ts_mmi_panel_off(struct ts_mmi_dev *touch_cdev) {
 #endif
 	TRY_TO_CALL(post_suspend);
 
-	touch_cdev->single_tap_enabled_prev = false;
-	touch_cdev->double_tap_enabled_prev = false;
+	touch_cdev->single_tap_enabled_prev = touch_cdev->single_tap_enabled;
+	touch_cdev->double_tap_enabled_prev = touch_cdev->double_tap_enabled;
 
 	dev_info(DEV_MMI, "%s: done\n", __func__);
 
