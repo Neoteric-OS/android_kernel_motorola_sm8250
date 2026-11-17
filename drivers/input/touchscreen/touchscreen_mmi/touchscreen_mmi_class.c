@@ -902,6 +902,8 @@ int ts_mmi_dev_register(struct device *parent,
 	dev_info(parent, "%s: new device\n", __func__);
 	DEV_TS = parent;
 	touch_cdev->mdata = mdata;
+	touch_cdev->single_tap_enabled_prev = true;
+	touch_cdev->double_tap_enabled_prev = true;
 	mutex_init(&touch_cdev->extif_mutex);
 	mutex_init(&touch_cdev->method_mutex);
 
